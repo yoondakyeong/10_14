@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>태극기</title>
+	 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+
+
+	<style type="text/css">
+		* {margin:0;
+        	padding:0;}
+
+		body{font-family: 'Noto Sans KR', sans-serif;
+			overflow-x: hidden;}
+
+		section {height: 960px;
+			width:100%;
+			position: relative;}
+
+		.ansection1{height: 500px;
+			width:100%;
+			position: relative;
+			background: white;
+			z-index: -5;}
+		.ansection2{height: 500px;
+			width:100%;
+			position: relative;
+			background: black;}
+
+		#headercover{display: flex;
+		 justify-content: center;}
+		header{position: fixed; 
+			height: 100%;
+			width: 98%;
+			z-index: 9;
+			pointer-events: none;}
+
+		#title{position: absolute;
+			right: 0%;
+			margin-top: 5px;
+			font-size: 1.3em;
+			font-weight: bold;
+			color: white; }
+		#nav_republic{position: absolute;
+			left: 0%;
+			margin-top: 5px;
+			font-size: 1.3em;
+			font-weight: bold;
+			color: white;}
+		#nav_name{position: absolute;
+			left: 0%;
+			top:93%;
+			margin-bottom: 5px;
+			transform: rotate(-90deg);
+			font-size: 1.2em;
+			font-weight: bold;
+			color: white;}
+		#nav_name2{position: absolute;
+			right: 0%;
+			top:93%;
+			margin-bottom: 5px;
+			transform: rotate(90deg);
+			font-size: 1.2em;
+			font-weight: bold;
+			color: white;}
+/* 섹션1 */
+		#section1 #section1G {display: flex;
+			justify-content: center;
+		 	position:relative;
+		 	height: 100%;}
+		#background1{height: 960px;
+			width: 100%;
+			background-color: black;}
+		#section1 #section1G #imgvertical{position: absolute;
+			margin-top: 7%;
+			transition: transform .2s;}
+
+		.imgvertical2:hover {
+  			-ms-transform: scale(0.8); /* IE 9 */
+  			-webkit-transform: scale(0.8); /* Safari 3-8 */
+ 			 transform: scale(0.8); }
+
+		#section1 #section1G #koreatitle{position: absolute;
+			margin-top: 7%;
+			left: 7%;
+			writing-mode: vertical-rl;
+			color: white;
+			font-size: 200px;
+			font-weight: 900;
+			text-shadow: 0px -8px #CD313A, -2px 11px #0047A0;}
+		#section1 #section1G #say1 {position: absolute;
+			font-family: 'Noto Serif KR', serif;
+			font-size: 40px;
+			font-weight: 600;
+			color: white;
+			top:14%;
+			left:79%;
+			letter-spacing: 15px;
+			transition: all 1s;
+			pointer-events: none;
+			animation: a 2s;
+			writing-mode: vertical-rl;}
+		#section1 #section1G #say2 {position: absolute;
+			font-size: 20px;
+			font-weight: 600;
+			color: white;
+			bottom:11%;
+			right: 9%;
+			transition: all 1s;
+			pointer-events: none;
+			letter-spacing: 5px;
+			animation: b 2s;
+			writing-mode: vertical-rl;}
+
+/* 섹션2 흰바탕 */
+		#section2{z-index: 1;}
+		#section2 #WB{position: absolute;
+			right: 50%;
+  			top: 50%;
+  			font-size: 150px;
+  			-webkit-text-stroke-width: 1px;
+   			-webkit-text-stroke-color: black;
+   			color: white;
+  			line-height: 1.1;
+  			font-weight: 600;
+    		transform: translate(-50%,-50%);
+    		font-family: 'Noto Serif KR', serif;}
+
+		#section2 #WBC{position: absolute;
+			left: 50%;
+  			top: 50%;
+  			font-size: 40px;
+    		transform: translate(0%,-50%);
+   			font-weight: 700;
+    		line-height: 1.6;
+    		color: #888;
+    		letter-spacing: -1px;
+    		word-spacing: -2px;
+    		width: 400px;
+   		 	text-indent: -18px;
+    		word-break: keep-all;}
+
+/* 섹션3 태극 */
+		#section3 #cirimg{position: absolute;
+			height: 200%;
+			right: -50%;
+			top:-50%;}
+		#section3 #cir1{position: absolute;
+			right: 50%;
+  			top: 50%;
+  			font-size: 150px;
+  			color: #0047A0;
+   			text-shadow: -6px -4px #CD313A;
+  			line-height: 1.1;
+  			font-weight: 900;
+    		transform: translate(-50%,-50%);
+    		font-family: 'Noto Serif KR', serif;}
+
+		#section3 #cir2{position: absolute;
+			left: 50%;
+  			top: 50%;
+  			font-size: 40px;
+    		transform: translate(0%,-50%);
+   			font-weight: 700;
+    		line-height: 1.6;
+    		color: #888;
+    		letter-spacing: -1px;
+    		word-spacing: -2px;
+    		width: 600px;
+   		 	text-indent: -18px;
+    		word-break: keep-all;}
+    	#section3 .S3{background-image:url(태극.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;}
+
+
+/* 섹션4 사괘*/
+		#section4 #squ1 {position: absolute;
+			right: 50%;
+  			top: 50%;
+  			font-size: 150px;
+   			color: black;
+  			line-height: 1.1;
+  			font-weight: 900;
+    		transform: translate(-50%,-50%);
+			z-index: 1;
+			font-family: 'Noto Serif KR', serif;}
+
+		#section4 #squ2 {position: absolute;
+			left: 50%;
+  			top: 50%;
+  			font-size: 40px;
+    		transform: translate(0%,-50%);
+   			font-weight: 700;
+    		line-height: 1.6;
+    		color: #888;
+    		letter-spacing: -1px;
+    		word-spacing: -2px;
+    		width: 600px;
+   		 	text-indent: -18px;
+    		word-break: keep-all;
+    		z-index: 1;}
+   
+    /*사괘이미지*/
+    	#section4 #squ3 #simg03{
+    		position: absolute;
+    		left: 0;
+    		top:0;}
+    	#section4 #squ3 #simg04{
+    		position: absolute;
+    		left: 0;
+    		bottom:0;}
+    	#section4 #squ3 #simg05{
+    		position: absolute;
+    		right: 0;
+    		top:0;}
+    	#section4 #squ3 #simg06{
+    		position: absolute;
+    		right: 0;
+    		bottom:0;}
+    /*사괘내용(질문)*/
+    	#squ4{display: none;}
+
+
+/* 섹션5 */
+    	#Ftitle1{position: absolute;
+    		top:50%;
+    		left: 50%;
+    		font-size: 100px;
+    		font-weight: bold;
+    		transform: translate(-50%, -50%);
+    		font-family: 'Noto Serif KR', serif;}
+
+    	#Ftitle2{position: absolute;
+    		top:50%;
+    		left: 50%;
+    		font-size: 100px;
+    		font-weight: bold;
+    		transform: translate(-50%, -50%);
+    		display: none;
+    		font-family: 'Noto Serif KR', serif;}
+
+    	#foot1{position: absolute;
+    		color: white;
+    		top:50%;
+    		left: 50%;
+    		font-size: 20px;
+    		font-weight: bold;
+    		text-align: center;
+    		transform: translate(-50%, -50%);}
+
+/* 키프레임 */
+			@keyframes a{from{top: -30%;}to{top: 14%; opacity:1;}}
+			@keyframes b{from{bottom:-30%;}to{bottom: 11%; opacity:1;}}
+
+			@keyframes c{from{opacity:0;}to{opacity:1;}}
+			@keyframes d{from{opacity:1;}to{opacity:0;}}
+
+	</style>
+
+	
+</head>
+<body>
+	<div id="headercover">
+	<header>
+		<div id="title">
+			Korea
+		</div>
+
+		<nav id="allnav">
+			<div class="nav" id="nav_republic">
+			Republic of
+			</div>
+
+			<div class="nav" id="nav_name" >
+			태극기
+			</div>
+
+			<div class="nav" id="nav_name2">
+			太 極 旗
+			</div>
+		</nav>
+
+	</header>
+	</div>
+
+
+	<section id="section1">
+		<div id="section1G">
+			<div id=background1>
+			</div>
+
+			<div id="imgvertical" class="imgvertical2">
+			<img src="태극기.jpg" style="height: 700px;">
+			</div>
+
+			<div id="koreatitle" style="font-family: 'Noto Serif KR', serif;">
+			太 極 旗
+			</div>
+
+			<audio src="soundd.mp3" id=soundd></audio>
+			<div id="say1">
+				<h1>국기에 대한 경례</h1>
+			</div>
+				<div id="say2">
+				나는 자랑스러운 태극기 앞에 <br> 
+				자유롭고 정의로운 대한민국의 <br>
+				무궁한 영광을 위하여<br> 
+				충성을 다할 것을 굳게 다짐합니다
+			</div>
+		</div>
+	</section>
+
+	<section id="section2">
+		<div id="WB">
+			흰색<br>바탕
+		</div>
+
+		<div id="WBC">
+			: 밝음과 순수, 전통적으로 평화를 사랑하는 우리의 민족성을 나타냅니다
+		</div>
+	</section>
+
+
+	<section id="section3" class="S3">
+		<img src="태극.png" id="cirimg">
+		<div id="cir1">
+			태극
+		</div>
+
+		<div id="cir2">
+			: 태극 문양은 음(파랑)과 양(빨강)의 조화를 상징하는 것으로<br>
+			우주 만물이 음양의 조화로 인해 생명을 얻고 발전한다는 대자연의 진리를 표현해낸 것입니다<br>
+		</div>
+	</section>
+
+	<section class= "ansection1">
+	</section>
+
+
+	<section id="section4">	
+		<div id="squ1">
+			사괘
+		</div>
+
+		<div id="squ2">
+			: 우리나라의 국기인 태극기의 모서리에 표현되어 하늘과 땅, 물과 불을 상징하는 4개의 괘이다.
+		</div>
+
+		<div id="squ3">
+			<img src="사괘3.jpg" style="height: 360px;" id="simg03">
+			<img src="사괘4.jpg" style="height: 360px;" id="simg04">
+			<img src="사괘5.jpg" style="height: 360px;" id="simg05">
+			<img src="사괘6.jpg" style="height: 360px;" id="simg06">
+		</div>
+
+		<div id="squ4">
+			<div id="Csqu03">건 : 하늘, 봄, 동쪽</div>
+			<div id="Csqu06">곤 : 땅, 여름, 서쪽</div>
+			<div id="Csqu05">감 : 물, 겨울, 북쪽</div>
+			<div id="Csqu04">리 : 불, 가을, 남쪽</div>
+		</div>
+	</section>
+
+
+	<section id="section5">
+		<div id="Ftitle1">
+		대  한  민  국
+		</div>
+
+		<div id="Ftitle2">
+		大  韓  民  國
+		</div>
+	</section>
+
+
+
+	<footer class= "ansection2">
+		<div id = "foot1">
+			
+			https://www.mois.go.kr/chd/sub/a05/birth/screen.do<br>
+			https://ko.wikipedia.org
+			
+		</div>
+	</footer>
+
+	<audio id="sound"> <source src="soundd.mp3" type="mp3" ></audio>
+
+
+</body>
+
+	<script type="text/javascript">
+		var say = "off"
+		imgvertical.onclick = function(){
+			if(say == "off"){
+				soundd.play();
+				soundd.volume=0.2;
+				say = "on";
+			}else{
+				soundd.pause();
+				say = "off";}
+		}
+
+		window.onscroll = function(){
+			var t = document.documentElement.scrollTop + document.body.scrollTop;
+			console.log(t)
+
+				if( t>100){
+					nav_name.style.color = "black";
+					nav_name2.style.color = "black";}
+					else{nav_name.style.color = "";
+						nav_name2.style.color = "";}
+
+				if(t > 540){
+					WBC.style.animation = "c 2s forwards";
+					WB.style.animation = "c 2s forwards";}
+					else{ WBC.style.animation = "d 1s forwards";
+							WB.style.animation = "d 1s forwards";}
+
+
+				if( t>940){
+					nav_republic.style.color = "black";
+					title.style.color = "black";}
+					else{nav_republic.style.color = "";
+						title.style.color = "";}
+
+				if(t > 1430){
+					cirimg.style.animation = "c 1s forwards";
+					cir1.style.animation = "c 2.5s forwards";
+					cir2.style.animation = "c 2.5s forwards";}
+					else{ cirimg.style.animation = "d 1s forwards";
+							cir1.style.animation = "d 1s forwards";
+							cir2.style.animation = "d 1s forwards";}
+
+				if(t > 2900){
+					squ1.style.animation = "c 2s forwards";
+					squ2.style.animation = "c 2s forwards";
+					simg03.style.animation = "c 2s forwards";
+					simg04.style.animation = "c 2s forwards";
+					simg05.style.animation = "c 2s forwards";
+					simg06.style.animation = "c 2s forwards";}
+					else{ squ1.style.animation = "d 1s forwards";
+							squ2.style.animation = "d 1s forwards";
+							simg03.style.animation = "d 1s forwards";
+							simg04.style.animation = "d 1s forwards";
+							simg05.style.animation = "d 1s forwards";
+							simg06.style.animation = "d 1s forwards";}
+
+
+				if( t>4368){
+					nav_name.style.color = "";
+					nav_name2.style.color = "";}
+
+
+				if(t > 4376){
+					Ftitle1.style.display = "none";
+					Ftitle2.style.display = "block";
+					}
+					else{ Ftitle1.style.display = "block";
+						Ftitle2.style.display = "";}
+				
+		}
+
+		
+		
+	</script>
+</html>
